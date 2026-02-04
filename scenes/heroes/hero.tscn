@@ -1,7 +1,8 @@
-[gd_scene load_steps=31 format=3 uid="uid://cjxepc2jmm86d"]
+[gd_scene load_steps=32 format=3 uid="uid://cjxepc2jmm86d"]
 
-[ext_resource type="Script" uid="uid://dstjiikb38jrb" path="res://characters/hero.gd" id="1_0cirb"]
+[ext_resource type="Script" uid="uid://dstjiikb38jrb" path="res://scenes/heroes/hero.gd" id="1_0cirb"]
 [ext_resource type="Texture2D" uid="uid://b0jn76cc5slnq" path="res://assets/Hero/Hero/Hero spritesheet BLUE with shadow.png" id="1_jkqpk"]
+[ext_resource type="PackedScene" uid="uid://bbf72vxyula7o" path="res://scenes/projectiles/bullet.tscn" id="2_7xhj1"]
 [ext_resource type="Texture2D" uid="uid://dh7pt1cc4qhvi" path="res://assets/Hero/Hero/gun sprite YELLOW.png" id="3_t4k1q"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0cirb"]
@@ -223,7 +224,7 @@ graph_offset = Vector2(-26, -10)
 
 [node name="Hero" type="CharacterBody2D"]
 script = ExtResource("1_0cirb")
-bob_height = 0.3
+bullet_scene = ExtResource("2_7xhj1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 2)
@@ -251,3 +252,6 @@ zoom = Vector2(2.5, 2.5)
 position = Vector2(0, 5)
 texture = ExtResource("3_t4k1q")
 flip_h = true
+
+[node name="Muzzle" type="Marker2D" parent="GunSprite"]
+position = Vector2(-6, -1)

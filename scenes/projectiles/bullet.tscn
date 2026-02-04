@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://bbf72vxyula7o"]
+
+[ext_resource type="Script" uid="uid://bwhyjq6hdv35i" path="res://scenes/projectiles/bullet.gd" id="1_yvfy2"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_48g2p"]
+radius = 1.0
+height = 2.0
+
+[node name="Bullet" type="Area2D"]
+script = ExtResource("1_yvfy2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_48g2p")

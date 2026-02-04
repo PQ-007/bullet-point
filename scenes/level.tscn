@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=4 uid="uid://b8twvwh0h2dru"]
+[gd_scene load_steps=6 format=4 uid="uid://b8twvwh0h2dru"]
 
 [ext_resource type="Texture2D" uid="uid://be1dwgfe8f25i" path="res://assets/Tileset/Tileset.png" id="1_2q6dc"]
-[ext_resource type="PackedScene" uid="uid://cjxepc2jmm86d" path="res://characters/hero.tscn" id="2_w7c3h"]
+[ext_resource type="PackedScene" uid="uid://cjxepc2jmm86d" path="res://scenes/heroes/hero.tscn" id="2_w7c3h"]
+[ext_resource type="Script" uid="uid://ds2jkgntbqsqq" path="res://scenes/spawner.gd" id="3_w8frs"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w7c3h"]
 texture = ExtResource("1_2q6dc")
@@ -190,6 +191,16 @@ tile_set = SubResource("TileSet_w8frs")
 
 [node name="Hero" parent="." instance=ExtResource("2_w7c3h")]
 position = Vector2(-51, 9)
-speed = null
-health = null
-damage = null
+
+[node name="Spawner" type="Node" parent="."]
+script = ExtResource("3_w8frs")
+
+[node name="Timer" type="Timer" parent="Spawner"]
+wait_time = 2.0
+autostart = true
+
+[node name="Mobs" type="Node" parent="."]
+
+[node name="Projectiles" type="Node" parent="."]
+
+[connection signal="timeout" from="Spawner/Timer" to="Spawner" method="_on_timer_timeout"]
