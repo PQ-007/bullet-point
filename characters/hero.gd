@@ -3,7 +3,7 @@ class_name Hero
 
 @onready var tree = $AnimationTree
 @onready var sprite = $Body 
-@onready var gun_sprite = $GunSpriteYellow
+@onready var gun_sprite = $GunSprite
 
 @export var speed := 100.0
 @export var health := 100.0
@@ -51,13 +51,13 @@ func update_animations():
 		# If moving left, flip the sprite. If moving right, unflip it.
 		if dir.x < 0:
 			sprite.flip_h = false
-			gun_sprite.flip_h = false
+			gun_sprite.flip_h = true
 		elif dir.x > 0:
 			sprite.flip_h = true
-			gun_sprite.flip_h = true
+			gun_sprite.flip_h = false
 			
 func start_bobbing(delta):
 	time += delta
 	# sin() creates a perfect smooth loop between -1 and 1
 	# We multiply it by height to get the movement range
-	$GunSpriteYellow.position.y = sin(time * bob_speed) * bob_height
+	$GunSprite.position.y = sin(time * bob_speed) * bob_height

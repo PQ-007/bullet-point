@@ -1,8 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://c4vm2lkn1v6pc"]
+[gd_scene load_steps=2 format=3 uid="uid://c4vm2lkn1v6pc"]
 
 [ext_resource type="Texture2D" uid="uid://6r6pp1j2vqcm" path="res://assets/Enemies/Guard/Guard spritesheet with shadow.png" id="1_opr0s"]
-
-[sub_resource type="SkeletonModificationStack2D" id="SkeletonModificationStack2D_30cdx"]
 
 [node name="Guard" type="CharacterBody2D"]
 
@@ -11,6 +9,3 @@ position = Vector2(2, -1)
 texture = ExtResource("1_opr0s")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-
-[node name="Skeleton2D" type="Skeleton2D" parent="."]
-modification_stack = SubResource("SkeletonModificationStack2D_30cdx")

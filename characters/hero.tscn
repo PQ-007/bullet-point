@@ -247,6 +247,7 @@ parameters/BlendSpace2D/blend_position = Vector2(0.0031678677, -0.0067265034)
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2.5, 2.5)
 
-[node name="GunSpriteYellow" type="Sprite2D" parent="."]
-position = Vector2(0, 1)
+[node name="GunSprite" type="Sprite2D" parent="."]
+position = Vector2(0, 5)
 texture = ExtResource("3_t4k1q")
+flip_h = true
