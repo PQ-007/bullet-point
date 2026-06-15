@@ -1,8 +1,10 @@
-[gd_scene load_steps=6 format=4 uid="uid://b8twvwh0h2dru"]
+[gd_scene load_steps=8 format=4 uid="uid://b8twvwh0h2dru"]
 
 [ext_resource type="Texture2D" uid="uid://be1dwgfe8f25i" path="res://assets/Tileset/Tileset.png" id="1_2q6dc"]
 [ext_resource type="PackedScene" uid="uid://cjxepc2jmm86d" path="res://scenes/heroes/hero.tscn" id="2_w7c3h"]
 [ext_resource type="Script" uid="uid://ds2jkgntbqsqq" path="res://scenes/spawner.gd" id="3_w8frs"]
+[ext_resource type="Script" path="res://scenes/level.gd" id="4_lvscr"]
+[ext_resource type="PackedScene" path="res://scenes/ui/hud.tscn" id="5_hud"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w7c3h"]
 texture = ExtResource("1_2q6dc")
@@ -176,6 +178,7 @@ texture = ExtResource("1_2q6dc")
 sources/0 = SubResource("TileSetAtlasSource_w7c3h")
 
 [node name="Level" type="Node2D"]
+script = ExtResource("4_lvscr")
 
 [node name="TileMap" type="TileMap" parent="."]
 texture_filter = 1
@@ -202,5 +205,7 @@ autostart = true
 [node name="Mobs" type="Node" parent="."]
 
 [node name="Projectiles" type="Node" parent="."]
+
+[node name="HUD" parent="." instance=ExtResource("5_hud")]
 
 [connection signal="timeout" from="Spawner/Timer" to="Spawner" method="_on_timer_timeout"]

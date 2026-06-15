@@ -1,7 +1,8 @@
-[gd_scene load_steps=29 format=3 uid="uid://c4vm2lkn1v6pc"]
+[gd_scene load_steps=30 format=3 uid="uid://c4vm2lkn1v6pc"]
 
 [ext_resource type="Texture2D" uid="uid://bldjr3tskmgk2" path="res://assets/Enemies/Warrior/Warrior spritesheet with shadow.png" id="1_jbjub"]
 [ext_resource type="Script" uid="uid://dydvmirup5r7k" path="res://scenes/enemies/guard.gd" id="1_qfsa4"]
+[ext_resource type="Script" path="res://scenes/ui/health_bar.gd" id="2_hbar"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qfsa4"]
 atlas = ExtResource("1_jbjub")
@@ -209,9 +210,10 @@ radius = 4.0
 height = 18.0
 
 [node name="Guard" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 3
 script = ExtResource("1_qfsa4")
 speed = 30.0
-hero_path = NodePath("Hero")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_os61m")
@@ -220,3 +222,7 @@ animation = &"idle"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 4)
 shape = SubResource("CapsuleShape2D_j1f74")
+
+[node name="HealthBar" type="Node2D" parent="."]
+position = Vector2(0, -18)
+script = ExtResource("2_hbar")

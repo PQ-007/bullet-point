@@ -7,6 +7,8 @@ radius = 1.0
 height = 2.0
 
 [node name="Bullet" type="Area2D"]
+collision_layer = 4
+collision_mask = 2
 script = ExtResource("1_yvfy2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
