@@ -1,4 +1,4 @@
-# Stranded
+# Bullet point
 
 A small top-down survivor-style shooter built with **Godot 4.5** (GL Compatibility renderer).
 You play a lone hero on a ruined island, fending off waves of guards that spawn around you.
