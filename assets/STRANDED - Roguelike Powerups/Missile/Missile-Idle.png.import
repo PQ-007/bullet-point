@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://geacy71dt38o"
-path="res://.godot/imported/Tileset.png-8b0287669db2a874bb9f3ab976d1332e.ctex"
+uid="uid://ry6l8jy1s2e8"
+path="res://.godot/imported/Missile-Idle.png-52f62925fe2a7b3f37a9924a20b66879.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Tileset/Tileset.png"
-dest_files=["res://.godot/imported/Tileset.png-8b0287669db2a874bb9f3ab976d1332e.ctex"]
+source_file="res://assets/STRANDED - Roguelike Powerups/Missile/Missile-Idle.png"
+dest_files=["res://.godot/imported/Missile-Idle.png-52f62925fe2a7b3f37a9924a20b66879.ctex"]
 
 [params]
 

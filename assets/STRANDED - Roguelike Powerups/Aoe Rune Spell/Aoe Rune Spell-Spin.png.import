@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://geacy71dt38o"
-path="res://.godot/imported/Tileset.png-8b0287669db2a874bb9f3ab976d1332e.ctex"
+uid="uid://bj2oagcjawl7d"
+path="res://.godot/imported/Aoe Rune Spell-Spin.png-9677c6eee04f19191fa31b56f25ab229.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Tileset/Tileset.png"
-dest_files=["res://.godot/imported/Tileset.png-8b0287669db2a874bb9f3ab976d1332e.ctex"]
+source_file="res://assets/STRANDED - Roguelike Powerups/Aoe Rune Spell/Aoe Rune Spell-Spin.png"
+dest_files=["res://.godot/imported/Aoe Rune Spell-Spin.png-9677c6eee04f19191fa31b56f25ab229.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://geacy71dt38o"
-path="res://.godot/imported/Tileset.png-8b0287669db2a874bb9f3ab976d1332e.ctex"
+uid="uid://cjj3eja3x4mic"
+path="res://.godot/imported/Techno Blade 32x22.png-7e2237ca66456c7ba4e59f23e21ba65e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Tileset/Tileset.png"
-dest_files=["res://.godot/imported/Tileset.png-8b0287669db2a874bb9f3ab976d1332e.ctex"]
+source_file="res://assets/STRANDED - Roguelike Powerups/Techno Blade/Techno Blade 32x22.png"
+dest_files=["res://.godot/imported/Techno Blade 32x22.png-7e2237ca66456c7ba4e59f23e21ba65e.ctex"]
 
 [params]
 

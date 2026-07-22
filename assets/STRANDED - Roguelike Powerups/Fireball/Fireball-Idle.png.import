@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://geacy71dt38o"
-path="res://.godot/imported/Tileset.png-8b0287669db2a874bb9f3ab976d1332e.ctex"
+uid="uid://j5fhaymdr4je"
+path="res://.godot/imported/Fireball-Idle.png-4d4079a176d3103c5cc98e442697a5ee.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Tileset/Tileset.png"
-dest_files=["res://.godot/imported/Tileset.png-8b0287669db2a874bb9f3ab976d1332e.ctex"]
+source_file="res://assets/STRANDED - Roguelike Powerups/Fireball/Fireball-Idle.png"
+dest_files=["res://.godot/imported/Fireball-Idle.png-4d4079a176d3103c5cc98e442697a5ee.ctex"]
 
 [params]
 

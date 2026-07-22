@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://geacy71dt38o"
-path="res://.godot/imported/Tileset.png-8b0287669db2a874bb9f3ab976d1332e.ctex"
+uid="uid://c566w0d4hqtlc"
+path="res://.godot/imported/Poison Glass Bottle 63x53.png-550066b734d37b3db9eb63df082046b8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Tileset/Tileset.png"
-dest_files=["res://.godot/imported/Tileset.png-8b0287669db2a874bb9f3ab976d1332e.ctex"]
+source_file="res://assets/STRANDED - Roguelike Powerups/Poison Bottle/Poison Glass Bottle 63x53.png"
+dest_files=["res://.godot/imported/Poison Glass Bottle 63x53.png-550066b734d37b3db9eb63df082046b8.ctex"]
 
 [params]
 

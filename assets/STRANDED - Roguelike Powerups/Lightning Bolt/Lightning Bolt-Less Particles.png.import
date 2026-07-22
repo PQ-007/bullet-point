@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://geacy71dt38o"
-path="res://.godot/imported/Tileset.png-8b0287669db2a874bb9f3ab976d1332e.ctex"
+uid="uid://c6hwm8yqlsko1"
+path="res://.godot/imported/Lightning Bolt-Less Particles.png-bb8c25cc30081283bbd6b7827522e423.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Tileset/Tileset.png"
-dest_files=["res://.godot/imported/Tileset.png-8b0287669db2a874bb9f3ab976d1332e.ctex"]
+source_file="res://assets/STRANDED - Roguelike Powerups/Lightning Bolt/Lightning Bolt-Less Particles.png"
+dest_files=["res://.godot/imported/Lightning Bolt-Less Particles.png-bb8c25cc30081283bbd6b7827522e423.ctex"]
 
 [params]
 

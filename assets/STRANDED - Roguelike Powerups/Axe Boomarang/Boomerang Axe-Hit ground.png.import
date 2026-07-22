@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://geacy71dt38o"
-path="res://.godot/imported/Tileset.png-8b0287669db2a874bb9f3ab976d1332e.ctex"
+uid="uid://d1fukrl46psm3"
+path="res://.godot/imported/Boomerang Axe-Hit ground.png-9bb9d21dc850d45e6a689759aa27ba7d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Tileset/Tileset.png"
-dest_files=["res://.godot/imported/Tileset.png-8b0287669db2a874bb9f3ab976d1332e.ctex"]
+source_file="res://assets/STRANDED - Roguelike Powerups/Axe Boomarang/Boomerang Axe-Hit ground.png"
+dest_files=["res://.godot/imported/Boomerang Axe-Hit ground.png-9bb9d21dc850d45e6a689759aa27ba7d.ctex"]
 
 [params]
 

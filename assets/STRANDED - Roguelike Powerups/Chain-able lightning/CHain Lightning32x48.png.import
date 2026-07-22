@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://geacy71dt38o"
-path="res://.godot/imported/Tileset.png-8b0287669db2a874bb9f3ab976d1332e.ctex"
+uid="uid://thfayais53m5"
+path="res://.godot/imported/CHain Lightning32x48.png-54b1f868acc34b6d563071a989b0ce8d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Tileset/Tileset.png"
-dest_files=["res://.godot/imported/Tileset.png-8b0287669db2a874bb9f3ab976d1332e.ctex"]
+source_file="res://assets/STRANDED - Roguelike Powerups/Chain-able lightning/CHain Lightning32x48.png"
+dest_files=["res://.godot/imported/CHain Lightning32x48.png-54b1f868acc34b6d563071a989b0ce8d.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://geacy71dt38o"
-path="res://.godot/imported/Tileset.png-8b0287669db2a874bb9f3ab976d1332e.ctex"
+uid="uid://dbdrbkiwl7rft"
+path="res://.godot/imported/Ice Spikes-Down.png-d81c78602eb66298f75fe00cd50bbb9a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Tileset/Tileset.png"
-dest_files=["res://.godot/imported/Tileset.png-8b0287669db2a874bb9f3ab976d1332e.ctex"]
+source_file="res://assets/STRANDED - Roguelike Powerups/Ice Spikes/Ice Spikes-Down.png"
+dest_files=["res://.godot/imported/Ice Spikes-Down.png-d81c78602eb66298f75fe00cd50bbb9a.ctex"]
 
 [params]
 
