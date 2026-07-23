@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cyu8qmurmtqt"]
+
+[ext_resource type="Script" uid="uid://c2v2mc2woyvoa" path="res://src/core/state_machine/state_machine.gd" id="1_h4s0n"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tjqdg"]
+height = 36.0
+
+[node name="Default_Guy" type="CharacterBody2D" unique_id=1969933963]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2062116852]
+shape = SubResource("CapsuleShape2D_tjqdg")
+
+[node name="StateMachine" type="Node" parent="." unique_id=2131977218]
+script = ExtResource("1_h4s0n")
+metadata/_custom_type_script = "uid://c2v2mc2woyvoa"
