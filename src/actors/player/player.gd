@@ -23,9 +23,11 @@ func get_dir_suffix(input_dir: Vector2) -> String:
 	return last_dir
 	
 func play_animation(anim_name: String, input_dir: Vector2):
-	var in_dir = get_dir_suffix(input_dir)
-	animated_sprite.play(anim_name + "_" + in_dir)
+		var dir_suffix = get_dir_suffix(input_dir)
+		#print("dir_suffix:", dir_suffix)
+		animated_sprite.play(anim_name + "_" + dir_suffix)
 	
-func _physics_process(delta):
+	
+func _physics_process(_delta):
 	
 	move_and_slide()
