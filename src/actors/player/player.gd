@@ -1,7 +1,8 @@
 class_name Player
 extends CharacterBody2D
 
-@export var move_speed := 100.0
+@export var walk_speed := 100.0
+@export var run_speed := 150.0
 @onready var animated_sprite := $AnimatedSprite2D
 var last_dir := "down"
 
@@ -12,14 +13,11 @@ func get_dir_suffix(input_dir: Vector2) -> String:
 	if abs(input_dir.y) > abs(input_dir.x):
 		last_dir = "top" if input_dir.y < 0 else "down"
 		animated_sprite.flip_h = false
+		animated_sprite.offset.x = 0
 	else:
 		last_dir = "lr"
-		if input_dir.x < 0:
-			animated_sprite.flip_h = true
-			
-		else:
-			animated_sprite.flip_h = false
-			
+		animated_sprite.flip_h = input_dir.x < 0
+		animated_sprite.offset.x = -3 if animated_sprite.flip_h else 0
 	return last_dir
 	
 func play_animation(anim_name: String, input_dir: Vector2):

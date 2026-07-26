@@ -1857,7 +1857,7 @@ script/source = "extends State
 
 func physics_update(_delta):
 	var input_dir = Input.get_vector(\"move_left\", \"move_right\", \"move_up\", \"move_down\")
-	
+	var is_running := Input.is_action_pressed(\"run\")
 	if input_dir == Vector2.ZERO:
 		state_machine.transition_to(\"Idle\")
 		return
@@ -1866,8 +1866,13 @@ func physics_update(_delta):
 		state_machine.transition_to(\"Attack\")
 		return
 	
-	actor.play_animation(\"run\", input_dir)
-	actor.velocity = input_dir * actor.move_speed
+	
+	if not is_running:
+		actor.velocity = input_dir * actor.walk_speed
+		actor.play_animation(\"walk\", input_dir)
+	else:
+		actor.velocity = input_dir * actor.run_speed
+		actor.play_animation(\"run\", input_dir)
 	actor.move_and_slide()
 "
 
@@ -1878,7 +1883,6 @@ script = ExtResource("1_tps1c")
 sprite_frames = SubResource("SpriteFrames_tjqdg")
 animation = &"idle_down"
 autoplay = "idle_down"
-frame_progress = 0.19602987
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1309289620]
 position = Vector2(-1, -2)
