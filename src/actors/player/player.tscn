@@ -6,7 +6,9 @@
 [ext_resource type="Script" uid="uid://sbjy04llr7cp" path="res://src/actors/player/shared_states/idle_state.gd" id="4_8tnyb"]
 [ext_resource type="Script" uid="uid://4ovfqcuft6cg" path="res://src/actors/player/shared_states/die_state.gd" id="4_dmu6e"]
 [ext_resource type="Script" uid="uid://wt4ms61voj6o" path="res://src/actors/player/shared_states/attack_state.gd" id="5_8tnyb"]
+[ext_resource type="Script" uid="uid://np3vcrrfa0tx" path="res://src/actors/player/shared_states/move_state.gd" id="5_nq65r"]
 [ext_resource type="Script" uid="uid://dim0qyyce34em" path="res://src/actors/player/shared_states/buff_state.gd" id="6_qdy1o"]
+[ext_resource type="Script" uid="uid://cuibg8y3mwjel" path="res://src/actors/player/roll.gd" id="8_qdy1o"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qdy1o"]
 atlas = ExtResource("2_8tnyb")
@@ -1852,37 +1854,15 @@ animations = [{
 radius = 4.0
 height = 16.0
 
-[sub_resource type="GDScript" id="GDScript_wabo4"]
-script/source = "extends State
-
-func physics_update(_delta):
-	var input_dir = Input.get_vector(\"move_left\", \"move_right\", \"move_up\", \"move_down\")
-	var is_running := Input.is_action_pressed(\"run\")
-	if input_dir == Vector2.ZERO:
-		state_machine.transition_to(\"Idle\")
-		return
-	
-	if Input.is_action_just_pressed(\"attack\"):
-		state_machine.transition_to(\"Attack\")
-		return
-	
-	
-	if not is_running:
-		actor.velocity = input_dir * actor.walk_speed
-		actor.play_animation(\"walk\", input_dir)
-	else:
-		actor.velocity = input_dir * actor.run_speed
-		actor.play_animation(\"run\", input_dir)
-	actor.move_and_slide()
-"
-
 [node name="Player" type="CharacterBody2D" unique_id=245129534]
 script = ExtResource("1_tps1c")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1380078425]
 sprite_frames = SubResource("SpriteFrames_tjqdg")
-animation = &"idle_down"
+animation = &"roll_down"
 autoplay = "idle_down"
+frame = 7
+frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1309289620]
 position = Vector2(-1, -2)
@@ -1898,7 +1878,7 @@ script = ExtResource("4_8tnyb")
 metadata/_custom_type_script = "uid://bi78bpxhe3jor"
 
 [node name="Move" type="Node" parent="StateMachine" unique_id=2112775971]
-script = SubResource("GDScript_wabo4")
+script = ExtResource("5_nq65r")
 metadata/_custom_type_script = "uid://bi78bpxhe3jor"
 
 [node name="Die" type="Node" parent="StateMachine" unique_id=115096513]
@@ -1911,4 +1891,8 @@ metadata/_custom_type_script = "uid://bi78bpxhe3jor"
 
 [node name="Buff" type="Node" parent="StateMachine" unique_id=1211526266]
 script = ExtResource("6_qdy1o")
+metadata/_custom_type_script = "uid://bi78bpxhe3jor"
+
+[node name="Roll" type="Node" parent="StateMachine" unique_id=3414515]
+script = ExtResource("8_qdy1o")
 metadata/_custom_type_script = "uid://bi78bpxhe3jor"
