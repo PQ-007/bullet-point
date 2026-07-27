@@ -11,7 +11,7 @@ func physics_update(_delta):
 		state_machine.transition_to("Move")
 		return
 	if Input.is_action_just_pressed("attack"):
-		state_machine.transition_to("Attack")
+		state_machine.transition_to("Attack", {"dir": input_dir})
 		return
 	
 	

@@ -13,4 +13,4 @@ texture = ExtResource("1_loyr8")
 [node name="Player" parent="." unique_id=245129534 instance=ExtResource("2_2kbc8")]
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=1294348972]
-zoom = Vector2(2, 2)
+zoom = Vector2(3, 3)

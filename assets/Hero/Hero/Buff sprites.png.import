@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cy25tcbotbmn5"
-path="res://.godot/imported/Hero spritesheet BLUE without shadow.png-6c269ae1377225014fc7b529b4164fbf.ctex"
+uid="uid://hjvxqmcl6yvs"
+path="res://.godot/imported/Buff sprites.png-bc6afc1231cc8f37e49171b3bc523b5c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Hero/Hero/Hero spritesheet BLUE without shadow.png"
-dest_files=["res://.godot/imported/Hero spritesheet BLUE without shadow.png-6c269ae1377225014fc7b529b4164fbf.ctex"]
+source_file="res://assets/Hero/Hero/Buff sprites.png"
+dest_files=["res://.godot/imported/Buff sprites.png-bc6afc1231cc8f37e49171b3bc523b5c.ctex"]
 
 [params]
 

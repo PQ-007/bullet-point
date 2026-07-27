@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dcgfhhcwqqqcn"
-path="res://.godot/imported/Hero spritesheet GREEN without shadow.png-ded80bddfb34138b25206673576041f2.ctex"
+uid="uid://p7f1w65obc0o"
+path="res://.godot/imported/scifi-100-4.png-35a0517545b684a961deecfdba160a0a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Hero/Hero/Hero spritesheet GREEN without shadow.png"
-dest_files=["res://.godot/imported/Hero spritesheet GREEN without shadow.png-ded80bddfb34138b25206673576041f2.ctex"]
+source_file="res://assets/Hero/Hero/scifi-100-4.png"
+dest_files=["res://.godot/imported/scifi-100-4.png-35a0517545b684a961deecfdba160a0a.ctex"]
 
 [params]
 

@@ -1,6 +1,6 @@
 extends State
 
-@export var roll_speed: float = 220.0
+@export var roll_speed: float = 120.0
 
 var roll_dir: Vector2 = Vector2.DOWN
 
