@@ -6,11 +6,12 @@
 [ext_resource type="Script" uid="uid://c2v2mc2woyvoa" path="res://src/core/state_machine/state_machine.gd" id="3_hod3v"]
 [ext_resource type="Script" uid="uid://sbjy04llr7cp" path="res://src/actors/player/shared_states/idle_state.gd" id="4_8tnyb"]
 [ext_resource type="Script" uid="uid://4ovfqcuft6cg" path="res://src/actors/player/shared_states/die_state.gd" id="4_dmu6e"]
-[ext_resource type="Texture2D" uid="uid://bdjw6px1qgjj" path="res://assets/Guns/gun2.png" id="4_mfqm3"]
+[ext_resource type="Script" uid="uid://4cgk6dla146b" path="res://src/core/hurt_box.gd" id="4_mfqm3"]
 [ext_resource type="Script" uid="uid://wt4ms61voj6o" path="res://src/actors/player/shared_states/attack_state.gd" id="5_8tnyb"]
 [ext_resource type="Script" uid="uid://np3vcrrfa0tx" path="res://src/actors/player/shared_states/move_state.gd" id="5_nq65r"]
 [ext_resource type="Script" uid="uid://dim0qyyce34em" path="res://src/actors/player/shared_states/buff_state.gd" id="6_qdy1o"]
-[ext_resource type="Script" uid="uid://cuibg8y3mwjel" path="res://src/actors/player/roll.gd" id="8_qdy1o"]
+[ext_resource type="Script" uid="uid://cuibg8y3mwjel" path="res://src/actors/player/unique_states/roll.gd" id="8_qdy1o"]
+[ext_resource type="Script" uid="uid://cun3x605rlbay" path="res://src/core/hit_box.gd" id="12_yq53s"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qdy1o"]
 atlas = ExtResource("2_8tnyb")
@@ -2048,6 +2049,9 @@ animations = [{
 radius = 4.0
 height = 16.0
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dffxq"]
+size = Vector2(36, 12)
+
 [node name="Player" type="CharacterBody2D" unique_id=245129534]
 script = ExtResource("1_tps1c")
 
@@ -2057,13 +2061,22 @@ animation = &"idle_lr"
 autoplay = "idle_down_gun"
 frame_progress = 0.11669772
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1309289620]
+position = Vector2(-1, -2)
+shape = SubResource("CapsuleShape2D_nqusm")
+disabled = true
+
 [node name="Gun" type="Sprite2D" parent="." unique_id=1925323230]
 position = Vector2(2.9999998, -2)
 scale = Vector2(0.7, 0.7)
-texture = ExtResource("4_mfqm3")
 region_rect = Rect2(0, 0, 25.612392, 16)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1309289620]
+[node name="HurtBox" type="Area2D" parent="." unique_id=1226902267]
+collision_layer = 16
+collision_mask = 32
+script = ExtResource("4_mfqm3")
+
+[node name="HurtBoxShape" type="CollisionShape2D" parent="HurtBox" unique_id=1334779679]
 position = Vector2(-1, -2)
 shape = SubResource("CapsuleShape2D_nqusm")
 
@@ -2096,8 +2109,11 @@ metadata/_custom_type_script = "uid://bi78bpxhe3jor"
 script = ExtResource("8_qdy1o")
 metadata/_custom_type_script = "uid://bi78bpxhe3jor"
 
-[node name="Area2D" type="Area2D" parent="." unique_id=1167987121]
+[node name="HitBox" type="Area2D" parent="." unique_id=1167987121]
+collision_layer = 32
+collision_mask = 16
+script = ExtResource("12_yq53s")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1748427742]
-position = Vector2(5, -1)
-debug_color = Color(0.9056213, 0.29980817, 0.13992235, 0.41960785)
+[node name="HitBoxShape" type="CollisionShape2D" parent="HitBox" unique_id=1748427742]
+position = Vector2(25, 2)
+shape = SubResource("RectangleShape2D_dffxq")
