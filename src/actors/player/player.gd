@@ -10,6 +10,7 @@ var health: int
 @onready var gun_sprite := $Gun
 @onready var state_machine := $StateMachine
 var last_dir := "down"
+var flipped := false
 
 func _ready() -> void:
 	health = max_health
@@ -26,8 +27,9 @@ func get_dir_suffix(input_dir: Vector2) -> String:
 		gun_sprite.offset.x = 0
 	else:
 		last_dir = "lr"
-		animated_sprite.flip_h = input_dir.x < 0
-		gun_sprite.flip_h = animated_sprite.flip_h
+		flipped = input_dir.x < 0
+		animated_sprite.flip_h = flipped
+		gun_sprite.flip_h = flipped
 		animated_sprite.offset.x = -3 if animated_sprite.flip_h else 0
 		gun_sprite.offset.x = -10 if gun_sprite.flip_h else 0
 	return last_dir
@@ -38,6 +40,7 @@ func play_animation(anim_name: String, input_dir: Vector2):
 		animated_sprite.play(anim_name + "_" + dir_suffix)
 
 func take_damage(amount: int, knockback: Vector2 = Vector2.ZERO) -> void:
+	print(health)
 	if health <= 0:
 		return
 	health -= amount

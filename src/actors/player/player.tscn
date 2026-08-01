@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://cckilbouacw88"]
 
 [ext_resource type="Script" uid="uid://dkmjr2u315vaw" path="res://src/actors/player/player.gd" id="1_tps1c"]
-[ext_resource type="Texture2D" uid="uid://drmimiluoomsn" path="res://assets/Hero/Hero/scifi-100-3.png" id="2_8tnyb"]
-[ext_resource type="Texture2D" uid="uid://p7f1w65obc0o" path="res://assets/Hero/Hero/scifi-100-4.png" id="3_b2jwx"]
+[ext_resource type="Texture2D" uid="uid://drmimiluoomsn" path="res://assets/Hero/Hero/scifi_hero_sword.png" id="2_8tnyb"]
+[ext_resource type="Texture2D" uid="uid://p7f1w65obc0o" path="res://assets/Hero/Hero/scifi_hero_gun.png" id="3_b2jwx"]
 [ext_resource type="Script" uid="uid://c2v2mc2woyvoa" path="res://src/core/state_machine/state_machine.gd" id="3_hod3v"]
 [ext_resource type="Script" uid="uid://sbjy04llr7cp" path="res://src/actors/player/shared_states/idle_state.gd" id="4_8tnyb"]
 [ext_resource type="Script" uid="uid://4ovfqcuft6cg" path="res://src/actors/player/shared_states/die_state.gd" id="4_dmu6e"]
@@ -2049,17 +2049,16 @@ animations = [{
 radius = 4.0
 height = 16.0
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_dffxq"]
-size = Vector2(36, 12)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7gp3m"]
 
 [node name="Player" type="CharacterBody2D" unique_id=245129534]
 script = ExtResource("1_tps1c")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1380078425]
 sprite_frames = SubResource("SpriteFrames_tjqdg")
-animation = &"idle_lr"
+animation = &"attack_down"
 autoplay = "idle_down_gun"
-frame_progress = 0.11669772
+frame = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1309289620]
 position = Vector2(-1, -2)
@@ -2115,5 +2114,4 @@ collision_mask = 16
 script = ExtResource("12_yq53s")
 
 [node name="HitBoxShape" type="CollisionShape2D" parent="HitBox" unique_id=1748427742]
-position = Vector2(25, 2)
-shape = SubResource("RectangleShape2D_dffxq")
+shape = SubResource("RectangleShape2D_7gp3m")
