@@ -14,6 +14,7 @@ var flipped := false
 
 func _ready() -> void:
 	health = max_health
+	add_to_group("player")
 	
 func get_dir_suffix(input_dir: Vector2) -> String:
 	if input_dir == Vector2.ZERO:

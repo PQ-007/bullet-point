@@ -29,5 +29,5 @@ func transition_to(state_name: String, msg := {}):
 		current_state.exit()
 	current_state = states[key]
 	current_state.enter(msg)
-	print("→ ", state_name)  # debug-д амар, аль state рүү шилжиж байгааг харна
+	#print("→ ", state_name)  # debug-д амар, аль state рүү шилжиж байгааг харна
 		

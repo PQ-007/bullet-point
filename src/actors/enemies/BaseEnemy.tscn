@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://c1pccs7khuh1i"]
+
+[ext_resource type="Script" uid="uid://c2v2mc2woyvoa" path="res://src/core/state_machine/state_machine.gd" id="1_bkowm"]
+[ext_resource type="Script" uid="uid://c60t84w08ge1g" path="res://src/actors/enemies/enemy.gd" id="1_dudcy"]
+[ext_resource type="Script" uid="uid://4cgk6dla146b" path="res://src/core/hurt_box.gd" id="2_5ql8n"]
+[ext_resource type="Script" uid="uid://d0y8pdlga2ih2" path="res://src/actors/enemies/shared_states/enemy_idle_state.gd" id="3_4j56h"]
+[ext_resource type="Script" uid="uid://cun3x605rlbay" path="res://src/core/hit_box.gd" id="3_kxq5q"]
+[ext_resource type="Script" uid="uid://cnp8van71t5pv" path="res://src/actors/enemies/shared_states/enemy_chase_state.gd" id="4_5ql8n"]
+[ext_resource type="Script" uid="uid://dyph3ilgx082m" path="res://src/actors/enemies/shared_states/enemy_attack_state.gd" id="5_kxq5q"]
+[ext_resource type="Script" uid="uid://che6t2b6radgn" path="res://src/actors/enemies/shared_states/enemy_hurt_state.gd" id="6_ffyvs"]
+[ext_resource type="Script" uid="uid://bs7bo7nle5v1l" path="res://src/actors/enemies/shared_states/enemy_die_state.gd" id="7_10vpf"]
+
+[node name="Enemy" type="CharacterBody2D" unique_id=1080659439]
+script = ExtResource("1_dudcy")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=803734190]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1191252219]
+position = Vector2(-1, -2)
+
+[node name="HurtBox" type="Area2D" parent="." unique_id=49147902]
+collision_layer = 16
+collision_mask = 32
+script = ExtResource("2_5ql8n")
+
+[node name="HurtBoxShape" type="CollisionShape2D" parent="HurtBox" unique_id=1433132954]
+
+[node name="HitBox" type="Area2D" parent="." unique_id=693772789]
+collision_layer = 32
+collision_mask = 16
+script = ExtResource("3_kxq5q")
+
+[node name="HitBoxShape" type="CollisionShape2D" parent="HitBox" unique_id=1171089851]
+
+[node name="StateMachine" type="Node" parent="." unique_id=1238212684]
+script = ExtResource("1_bkowm")
+metadata/_custom_type_script = "uid://c2v2mc2woyvoa"
+
+[node name="Idle" type="Node" parent="StateMachine" unique_id=177552028]
+script = ExtResource("3_4j56h")
+metadata/_custom_type_script = "uid://bi78bpxhe3jor"
+
+[node name="Chase" type="Node" parent="StateMachine" unique_id=71288964]
+script = ExtResource("4_5ql8n")
+metadata/_custom_type_script = "uid://bi78bpxhe3jor"
+
+[node name="Attack" type="Node" parent="StateMachine" unique_id=1400798145]
+script = ExtResource("5_kxq5q")
+metadata/_custom_type_script = "uid://bi78bpxhe3jor"
+
+[node name="Hurt" type="Node" parent="StateMachine" unique_id=1032243355]
+script = ExtResource("6_ffyvs")
+metadata/_custom_type_script = "uid://bi78bpxhe3jor"
+
+[node name="Die" type="Node" parent="StateMachine" unique_id=1974124921]
+script = ExtResource("7_10vpf")
+metadata/_custom_type_script = "uid://bi78bpxhe3jor"
