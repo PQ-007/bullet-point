@@ -2,11 +2,11 @@ extends State
 
 @export var active_frame: int = 0
 @export var recovery_frame: int = 3
+@export var hitbox_offset := Vector2(16, 0)
+@export var hitbox_size := Vector2(24, 14)
 @export var damage: int = 8
-@export var knockback_force: float = 150.0
+@export var knockback_force: float = 0.0
 
-const HITBOX_OFFSET := Vector2(16, 0)  # base offset when facing right
-const HITBOX_SIZE := Vector2(24, 14)
 
 var attack_dir: Vector2 = Vector2.RIGHT
 
@@ -38,12 +38,13 @@ func _on_frame_changed() -> void:
 		actor.hit_box.deactivate()
 
 func _activate_hitbox() -> void:
-	var offset = HITBOX_OFFSET
+	var offset = hitbox_offset
+	var size = hitbox_size
 	if attack_dir == Vector2.LEFT:
 		offset.x = -offset.x
 	actor.hit_box.damage = damage
 	actor.hit_box.knockback_force = knockback_force
-	actor.hit_box.activate(offset, HITBOX_SIZE, attack_dir)
+	actor.hit_box.activate(offset, size, attack_dir)
 
 func _on_attack_finished() -> void:
 	state_machine.transition_to("Chase")

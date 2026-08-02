@@ -1,14 +1,15 @@
 class_name Enemy
 extends CharacterBody2D
 
-@export var max_health: int = 100
-@export var detect_range: int = 500
-@export var attack_range: int = 50
-@export var move_speed: int = 100
+@export var stats: EnemyStats
 
 var health: int
+var detect_range: float
+var attack_range: float
+var move_speed: float
 var flipped := false
 var player: Player
+
 
 @onready var animated_sprite := $AnimatedSprite2D
 @onready var hurt_box := $HurtBox
@@ -16,7 +17,11 @@ var player: Player
 @onready var state_machine := $StateMachine
 
 func _ready() -> void:
-	health = max_health
+	health = stats.max_health
+	detect_range = stats.detect_range
+	attack_range = stats.attack_range
+	move_speed = stats.move_speed
+	
 	add_to_group("enemy")
 	player = get_tree().get_first_node_in_group("player")
 

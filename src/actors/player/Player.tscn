@@ -1561,7 +1561,7 @@ animations = [{
 }],
 "loop": 0,
 "name": &"roll_down",
-"speed": 10.0
+"speed": 15.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1590,7 +1590,7 @@ animations = [{
 }],
 "loop": 0,
 "name": &"roll_down_gun",
-"speed": 10.0
+"speed": 15.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1613,7 +1613,7 @@ animations = [{
 }],
 "loop": 0,
 "name": &"roll_lr",
-"speed": 10.0
+"speed": 15.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1636,7 +1636,7 @@ animations = [{
 }],
 "loop": 0,
 "name": &"roll_lr_gun",
-"speed": 10.0
+"speed": 15.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1665,7 +1665,7 @@ animations = [{
 }],
 "loop": 0,
 "name": &"roll_top",
-"speed": 10.0
+"speed": 15.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1694,7 +1694,7 @@ animations = [{
 }],
 "loop": 0,
 "name": &"roll_top_gun",
-"speed": 10.0
+"speed": 15.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -2053,12 +2053,12 @@ height = 16.0
 
 [node name="Player" type="CharacterBody2D" unique_id=245129534]
 script = ExtResource("1_tps1c")
+max_health = 10000
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1380078425]
 sprite_frames = SubResource("SpriteFrames_tjqdg")
-animation = &"attack_down"
+animation = &"roll_top_gun"
 autoplay = "idle_down_gun"
-frame = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1309289620]
 position = Vector2(-1, -2)
@@ -2090,6 +2090,7 @@ metadata/_custom_type_script = "uid://bi78bpxhe3jor"
 
 [node name="Move" type="Node" parent="StateMachine" unique_id=2112775971]
 script = ExtResource("5_nq65r")
+walk_speed = 90.0
 metadata/_custom_type_script = "uid://bi78bpxhe3jor"
 
 [node name="Die" type="Node" parent="StateMachine" unique_id=115096513]

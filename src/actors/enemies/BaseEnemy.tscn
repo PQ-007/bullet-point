@@ -3,12 +3,12 @@
 [ext_resource type="Script" uid="uid://c2v2mc2woyvoa" path="res://src/core/state_machine/state_machine.gd" id="1_bkowm"]
 [ext_resource type="Script" uid="uid://c60t84w08ge1g" path="res://src/actors/enemies/enemy.gd" id="1_dudcy"]
 [ext_resource type="Script" uid="uid://4cgk6dla146b" path="res://src/core/hurt_box.gd" id="2_5ql8n"]
-[ext_resource type="Script" uid="uid://d0y8pdlga2ih2" path="res://src/actors/enemies/shared_states/enemy_idle_state.gd" id="3_4j56h"]
+[ext_resource type="Script" uid="uid://d0y8pdlga2ih2" path="res://src/actors/enemies/z_shared_states/enemy_idle_state.gd" id="3_4j56h"]
 [ext_resource type="Script" uid="uid://cun3x605rlbay" path="res://src/core/hit_box.gd" id="3_kxq5q"]
-[ext_resource type="Script" uid="uid://cnp8van71t5pv" path="res://src/actors/enemies/shared_states/enemy_chase_state.gd" id="4_5ql8n"]
-[ext_resource type="Script" uid="uid://dyph3ilgx082m" path="res://src/actors/enemies/shared_states/enemy_attack_state.gd" id="5_kxq5q"]
-[ext_resource type="Script" uid="uid://che6t2b6radgn" path="res://src/actors/enemies/shared_states/enemy_hurt_state.gd" id="6_ffyvs"]
-[ext_resource type="Script" uid="uid://bs7bo7nle5v1l" path="res://src/actors/enemies/shared_states/enemy_die_state.gd" id="7_10vpf"]
+[ext_resource type="Script" uid="uid://cnp8van71t5pv" path="res://src/actors/enemies/z_shared_states/enemy_chase_state.gd" id="4_5ql8n"]
+[ext_resource type="Script" uid="uid://dyph3ilgx082m" path="res://src/actors/enemies/z_shared_states/enemy_attack_state.gd" id="5_kxq5q"]
+[ext_resource type="Script" uid="uid://che6t2b6radgn" path="res://src/actors/enemies/z_shared_states/enemy_hurt_state.gd" id="6_ffyvs"]
+[ext_resource type="Script" uid="uid://bs7bo7nle5v1l" path="res://src/actors/enemies/z_shared_states/enemy_die_state.gd" id="7_10vpf"]
 
 [node name="Enemy" type="CharacterBody2D" unique_id=1080659439]
 script = ExtResource("1_dudcy")

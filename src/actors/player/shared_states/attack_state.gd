@@ -1,13 +1,16 @@
 extends State
 
+@export var attack_damage := 30
+@export var chop_damage := 20
+
 var combo_stage: int = 0
 var combo_queued: bool = false
 var facing_dir: Vector2 = Vector2.DOWN
 
-const STAGE_DATA := {
+var stage_data := {
 	2: {
 		"anim": "attack",
-		"damage": 15,
+		"damage": attack_damage,
 		"configs": {
 			"down":  {"offset": Vector2(0, 7),  "size": Vector2(38, 36), "active": 2, "recovery": 5},
 			"top":   {"offset": Vector2(-0.5, -11.5), "size": Vector2(37, 35), "active": 2, "recovery": 4},
@@ -16,7 +19,7 @@ const STAGE_DATA := {
 	},
 	1: {
 		"anim": "chop",
-		"damage": 10,
+		"damage": chop_damage,
 		"configs": {
 			"down":  {"offset": Vector2(-10, 10),  "size": Vector2(20, 38), "active": 0, "recovery": 2},
 			"top":   {"offset": Vector2(6.5, -18.5), "size": Vector2(19, 33), "active": 0, "recovery": 2},
@@ -42,7 +45,7 @@ func enter(params := {}) -> void:
 
 func _play_stage() -> void:
 	actor.hit_box.deactivate()
-	var data = STAGE_DATA[combo_stage]
+	var data = stage_data[combo_stage]
 	actor.play_animation(data["anim"], facing_dir)
 	actor.animated_sprite.animation_finished.connect(_on_stage_finished, CONNECT_ONE_SHOT)
 	var config = _get_config(combo_stage)
@@ -54,7 +57,7 @@ func physics_update(_delta: float) -> void:
 		combo_queued = true
 
 func _get_config(stage: int) -> Dictionary:
-	var configs = STAGE_DATA[stage]["configs"]
+	var configs = stage_data[stage]["configs"]
 	var key = actor.last_dir
 	if key == "lr":
 		key = "right"
@@ -71,7 +74,7 @@ func _activate_hitbox(data: Dictionary, config: Dictionary) -> void:
 	actor.hit_box.activate(config["offset"], config["size"], DIR_VECTORS[dir_key])
 
 func _on_frame_changed() -> void:
-	var data = STAGE_DATA[combo_stage]
+	var data = stage_data[combo_stage]
 	if not actor.animated_sprite.animation.begins_with(data["anim"]):
 		return
 	var config = _get_config(combo_stage)

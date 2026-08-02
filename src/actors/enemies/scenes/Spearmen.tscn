@@ -1,5 +1,0 @@
-[gd_scene format=3 uid="uid://cgqsj0dvyspbh"]
-
-[ext_resource type="PackedScene" uid="uid://c1pccs7khuh1i" path="res://src/actors/enemies/BaseEnemy.tscn" id="1_chr53"]
-
-[node name="SpearMen" unique_id=1080659439 instance=ExtResource("1_chr53")]

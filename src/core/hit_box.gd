@@ -1,8 +1,8 @@
 class_name HitBox
 extends Area2D
 
-@export var damage: int = 10
-@export var knockback_force: float = 200.0
+var damage: int = 10
+var knockback_force: float = 100.0
 
 var hit_targets: Array = []
 var current_dir_vector: Vector2 = Vector2.DOWN

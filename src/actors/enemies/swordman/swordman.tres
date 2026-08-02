@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="EnemyStats" format=3 uid="uid://lvtqq7whlyo4"]
+
+[ext_resource type="Script" uid="uid://nfrxgwf1lom8" path="res://src/actors/enemies/enemy_stats.gd" id="1_t7bi5"]
+
+[resource]
+script = ExtResource("1_t7bi5")
+attack_range = 10.0
+metadata/_custom_type_script = "uid://nfrxgwf1lom8"
