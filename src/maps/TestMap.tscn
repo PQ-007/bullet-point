@@ -2,8 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bjklecny34x6y" path="res://icon.svg" id="1_ukyk3"]
 [ext_resource type="PackedScene" uid="uid://cckilbouacw88" path="res://src/actors/player/Player.tscn" id="2_kn71g"]
-[ext_resource type="PackedScene" uid="uid://c0e854j5u8k4k" path="res://src/actors/enemies/swordman/Swordman.tscn" id="3_7f038"]
-[ext_resource type="PackedScene" uid="uid://cgqsj0dvyspbh" path="res://src/actors/enemies/spearman/Spearmen.tscn" id="4_kn71g"]
+[ext_resource type="PackedScene" uid="uid://b7ro70r604c78" path="res://src/actors/enemies/archer/Archer.tscn" id="3_u6hag"]
 
 [node name="TestAmp" type="Node2D" unique_id=1755993805]
 
@@ -15,10 +14,6 @@ texture = ExtResource("1_ukyk3")
 [node name="Player" parent="." unique_id=245129534 instance=ExtResource("2_kn71g")]
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=1294348972]
-zoom = Vector2(2, 2)
 
-[node name="Swordman" parent="." unique_id=1080659439 instance=ExtResource("3_7f038")]
-position = Vector2(162, -88)
-
-[node name="SpearMen" parent="." unique_id=205160625 instance=ExtResource("4_kn71g")]
-position = Vector2(-29, -76)
+[node name="Archer" parent="." unique_id=1080659439 instance=ExtResource("3_u6hag")]
+position = Vector2(59, -88)
